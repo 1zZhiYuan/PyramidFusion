@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图像处理结果展示</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .gallery-item {
+            flex: 0 1 calc(33.333% - 20px);
+            margin: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: translateY(-10px);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .gallery-item h2 {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            margin: 0;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>图像处理结果展示</h1>
+    <div class="container">
+        <div class="gallery">
+            <div class="gallery-item">
+                <h2>低通滤波（狗）</h2>
+                <img src="../static/processed1/dog_low_pass.jpg" alt="Dog Low Pass">
+            </div>
+            <div class="gallery-item">
+                <h2>高通滤波（猫）</h2>
+                <img src="../static/processed1/cat_high_pass.jpg" alt="Cat High Pass">
+            </div>
+            <div class="gallery-item">
+                <h2>融合图像1</h2>
+                <img src="../static/processed1/fused_image.jpg" alt="Fused Image 1">
+            </div>
+            <div class="gallery-item">
+                <h2>低通滤波（猫）</h2>
+                <img src="../static/processed2/cat_low_pass.jpg" alt="Cat Low Pass">
+            </div>
+            <div class="gallery-item">
+                <h2>高通滤波（狗）</h2>
+                <img src="../static/processed2/dog_high_pass.jpg" alt="Dog High Pass">
+            </div>
+            <div class="gallery-item">
+                <h2>融合图像2</h2>
+                <img src="../static/processed2/fused_image.jpg" alt="Fused Image 2">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
